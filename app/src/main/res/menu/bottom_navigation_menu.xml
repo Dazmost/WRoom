@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_patients"
+        android:enabled="true"
+        android:icon="@drawable/ic_action_patients"
+        android:title="Patients"
+        app:showAsAction="ifRoom" />
+
+    <item
+    android:id="@+id/action_stats"
+    android:enabled="true"
+    android:icon="@drawable/ic_action_stats"
+    android:title="Stats"
+    app:showAsAction="ifRoom" />
+
+    <item
+    android:id="@+id/action_nearby"
+    android:enabled="true"
+    android:icon="@drawable/ic_action_nearby"
+    android:title="Calendar"
+    app:showAsAction="ifRoom" />
+
+</menu>

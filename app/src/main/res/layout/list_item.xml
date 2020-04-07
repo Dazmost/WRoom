@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="78dp"
+    android:background="?android:attr/activatedBackgroundIndicator">
+
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="16dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/number_circle"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        tools:text="Mag" />
+
+    <!--    android:layout_gravity="center_vertical"-->
+
+    <TextView
+        android:id="@+id/checkin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="13dp"
+        android:layout_marginRight="16dp"
+        android:textColor="@color/textColorEarthquakeDetails"
+        android:textSize="12sp"
+        tools:text="Check-in" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/checkin"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:textColor="@color/textColorEarthquakeDetails"
+        android:textSize="12sp"
+        tools:text="Dec 31, 1969" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/date"
+        android:layout_marginRight="16dp"
+        android:layout_width="wrap_content"
+        android:textColor="@color/textColorEarthquakeDetails"
+        android:textSize="12sp"
+        android:layout_height="wrap_content"
+        tools:text="3:00 PM" />
+
+    <TextView
+        android:id="@+id/appointment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="36dp"
+        android:layout_marginTop="13dp"
+        android:layout_toLeftOf="@id/checkin"
+        android:textColor="@color/textColorEarthquakeDetails"
+        android:textSize="12sp"
+        tools:text="Appointment" />
+
+    <TextView
+        android:id="@+id/appointment_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appointment"
+        android:layout_marginRight="36dp"
+        android:layout_marginTop="1dp"
+        android:layout_toLeftOf="@id/checkin"
+        android:textStyle="bold"
+        android:textColor="@color/textColorEarthquakeLocation"
+        android:textSize="16sp"
+        tools:text="3:00 PM" />
+
+    <TextView
+        android:id="@+id/countdown"
+        android:layout_below="@id/appointment_time"
+        android:layout_marginRight="36dp"
+        android:layout_toLeftOf="@id/checkin"
+        android:layout_width="wrap_content"
+        android:textColor="@color/textColorEarthquakeDetails"
+        android:textSize="10sp"
+        android:layout_height="wrap_content"
+        tools:text="3:27:39" />
+
+    <TextView
+        android:id="@+id/patientcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@id/number"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif-medium"
+        android:maxLines="1"
+        android:textAllCaps="true"
+        android:textColor="@color/textColorEarthquakeDetails"
+        android:textSize="12sp"
+        tools:text="#10203" />
+
+    <TextView
+        android:id="@+id/Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/patientcode"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_toRightOf="@id/number"
+        android:layout_toLeftOf="@+id/appointment"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textStyle="bold"
+        android:textColor="@color/textColorEarthquakeLocation"
+        android:textSize="16sp"
+        tools:text="Name" />
+
+</RelativeLayout>
+
+
+
