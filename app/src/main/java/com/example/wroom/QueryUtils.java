@@ -384,7 +384,11 @@ public final class QueryUtils {
             //urlConnection.setReadTimeout(10000 /* milliseconds */);
             //urlConnection.setConnectTimeout(15000 /* milliseconds */);
             urlConnection.setDoOutput(true);
+            urlConnection.setRequestProperty("Content-Type",
+                    "application/x-www-form-urlencoded");
             urlConnection.setRequestMethod("DELETE");
+            Log.d("myTag2", String.valueOf(url));
+
             //urlConnection.setRequestProperty("Content-Type", "application/json; charset=utf-8");
             //urlConnection.setRequestProperty("Accept", "application/json");
             urlConnection.connect();
@@ -405,6 +409,7 @@ public final class QueryUtils {
             // then read the input stream and parse the response.
             if (urlConnection.getResponseCode() == 200) {
 
+                inputStream = urlConnection.getInputStream();
                 inputStream = urlConnection.getInputStream();
                 jsonResponse = readFromStream(inputStream);
             } else {

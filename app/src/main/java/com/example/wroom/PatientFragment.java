@@ -36,7 +36,8 @@ public class PatientFragment extends Fragment {
 
     public static final String LOG_TAG = PatientFragment.class.getName();
     /** URL for NodeJs Sever */
-    private static final String REQUEST_URL ="http://10.0.0.194:8000/api/patients";
+    private static final String REQUEST_URL ="http://192.168.2.13:8000/api/patients";
+    //private static final String REQUEST_URL ="http://10.0.0.194:8000/api/patients";
 
     View rootView;
     //DatabaseHelper myDB;
@@ -513,7 +514,9 @@ public class PatientFragment extends Fragment {
 
             if(urls.length >= 3) {
                 if (urls[2] == "delete" || urls[2] != null) {
-                    QueryUtils.deletePatientData(urls[0], urls[1]);
+                    System.out.print (urls[0]+"/code/"+urls[1]);
+                    Log.d("myTag", "This is my message:"+urls[0]+"/code/"+urls[1]);
+                    QueryUtils.deletePatientData(urls[0]+"/code", urls[1]);
                 }
             }
 

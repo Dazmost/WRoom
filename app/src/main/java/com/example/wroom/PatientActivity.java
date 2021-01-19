@@ -31,7 +31,8 @@ public class PatientActivity extends AppCompatActivity {
 
 
     public static final String LOG_TAG = PatientActivity.class.getName();
-    private static final String REQUEST_URL ="http://10.0.0.194:8000/api/patients";
+    private static final String REQUEST_URL ="http://192.168.2.13:8000/api/patients";
+    //private static final String REQUEST_URL ="http://10.0.0.194:8000/api/patients";
 
     ArrayList<Patient> patientList;
     EditText name;
@@ -105,8 +106,8 @@ public class PatientActivity extends AppCompatActivity {
                 String nameString = name.getText().toString();
 
                 appointmentTimeWidget = (TimePicker) findViewById(R.id.timePicker);
-                int timeHour = appointmentTimeWidget.getHour();
-                int timeMinute = appointmentTimeWidget.getMinute();
+                int timeHour = appointmentTimeWidget.getCurrentHour();//getHour();
+                int timeMinute = appointmentTimeWidget.getCurrentMinute();//getMinute();
 
                 appointmentTimeTotal=convertTimePickerToAppointmentTIme(timeHour,timeMinute);
 

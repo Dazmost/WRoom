@@ -33,7 +33,8 @@ public class ModifyPatientActivity extends AppCompatActivity {
 
     public static final String LOG_TAG = ModifyPatientActivity.class.getName();
     /** URL for NodeJs Sever */
-    private static final String REQUEST_URL ="http://10.0.0.194:8000/api/patients";
+    private static final String REQUEST_URL ="http://192.168.2.13:8000/api/patients";
+    //private static final String REQUEST_URL ="http://10.0.0.194:8000/api/patients";
 
     ArrayList<Patient> patientList;
     Patient currentPatient;
@@ -142,8 +143,8 @@ public class ModifyPatientActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //time in milliseconds from the widget
                 appointmentTimeWidget = (TimePicker) findViewById(R.id.timePicker_modify);
-                int timeHour = appointmentTimeWidget.getHour();
-                int timeMinute = appointmentTimeWidget.getMinute();
+                int timeHour = appointmentTimeWidget.getCurrentHour(); //was getHour()
+                int timeMinute = appointmentTimeWidget.getCurrentMinute(); //was getMinute()
                 long timeHourToMilli = TimeUnit.MINUTES.toMillis(timeMinute);
                 long timeMinuteToMilli = TimeUnit.HOURS.toMillis(timeHour);
                 appointmentTimeTotal = timeHourToMilli + timeMinuteToMilli;
