@@ -1,3 +1,5 @@
+My Personal Notes For Reference
+
 Android Studio > Settings > System Settings > Android SDK > API Level 29 > Update
 
 
@@ -26,3 +28,6 @@ Patient Fragment, ModifyPatientActivity and Patient Activity
     private static final String REQUEST_URL ="http://192.---.-.--:8000/api/patients";
 
 find ip address with ipconfig in command prompt
+
+git
+$ git push origin master:FixDeleteHttpRequest-UpdateJan2021
